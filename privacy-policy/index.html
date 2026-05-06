@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — VibeVisionFinds</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --dark: #1A1410;
+    --accent: #C8523A;
+    --muted: #7A6E65;
+    --border: #E8E0D5;
+    --card: #FFFFFF;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  /* Header */
+  header {
+    background: var(--dark);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .header-date {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--dark);
+    padding: 4rem 2rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,82,58,0.15) 0%, transparent 70%);
+    top: -100px; left: 50%; transform: translateX(-50%);
+    pointer-events: none;
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(200,82,58,0.4);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .hero h1 em { color: var(--accent); font-style: italic; }
+  .hero p {
+    font-size: 15px;
+    color: rgba(250,247,242,0.55);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* TOC */
+  .toc-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 820px;
+    margin: -2rem auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 40px rgba(26,20,16,0.08);
+  }
+  .toc-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 6px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 13px;
+    transition: background .15s;
+  }
+  .toc-item:hover { background: var(--cream); }
+  .toc-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* Main content */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 2rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-number {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: var(--dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cream);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+
+  p { margin-bottom: 1rem; color: #3D3530; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    margin: .75rem 0 1rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: .5rem;
+    color: #3D3530;
+    font-size: 15px;
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 11px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .highlight-box {
+    background: #FFF8F6;
+    border: 1px solid rgba(200,82,58,0.2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+  .highlight-box p { color: #5A2E22; margin-bottom: 0; font-size: 14px; }
+
+  .info-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+  .info-box .info-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .5rem;
+  }
+  .info-box p { margin-bottom: 0; font-size: 14px; }
+
+  .contact-card {
+    background: var(--dark);
+    border-radius: 16px;
+    padding: 2rem;
+    color: var(--cream);
+    margin-top: 1.5rem;
+  }
+  .contact-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: .75rem;
+    color: var(--cream);
+  }
+  .contact-card p { color: rgba(250,247,242,0.65); font-size: 14px; margin-bottom: .5rem; }
+  .contact-card a { color: var(--accent); text-decoration: none; }
+  .contact-card a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    background: var(--dark);
+    padding: 2rem;
+    text-align: center;
+  }
+  footer p { font-size: 12px; color: rgba(250,247,242,0.35); margin: 0; }
+  footer .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    margin-bottom: .5rem;
+  }
+  footer .footer-logo span { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 3rem 1.25rem 4rem; }
+    main { padding: 2rem 1.25rem 4rem; }
+    .toc-wrap { margin: -1.5rem 1rem 0; padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Vibe<span>Vision</span>Finds</div>
+  <div class="header-date">Effective: January 1, 2025</div>
+</header>
+
+<div class="hero">
+  <div class="hero-label">Legal</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <p>How VibeVisionFinds collects, uses, and protects your personal information.</p>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc-title">Table of Contents</div>
+  <div class="toc-grid">
+    <a href="#s1" class="toc-item"><div class="toc-num">1</div>Information We Collect</a>
+    <a href="#s2" class="toc-item"><div class="toc-num">2</div>How We Use Your Data</a>
+    <a href="#s3" class="toc-item"><div class="toc-num">3</div>Cookies &amp; Tracking</a>
+    <a href="#s4" class="toc-item"><div class="toc-num">4</div>Third-Party Services</a>
+    <a href="#s5" class="toc-item"><div class="toc-num">5</div>Pinterest Integration</a>
+    <a href="#s6" class="toc-item"><div class="toc-num">6</div>Data Sharing</a>
+    <a href="#s7" class="toc-item"><div class="toc-num">7</div>Data Retention</a>
+    <a href="#s8" class="toc-item"><div class="toc-num">8</div>Your Rights</div>
+    <a href="#s9" class="toc-item"><div class="toc-num">9</div>Security</a>
+    <a href="#s10" class="toc-item"><div class="toc-num">10</div>Children's Privacy</a>
+    <a href="#s11" class="toc-item"><div class="toc-num">11</div>Policy Changes</a>
+    <a href="#s12" class="toc-item"><div class="toc-num">12</div>Contact Us</a>
+  </div>
+</div>
+
+<main>
+
+  <div class="info-box" style="margin-bottom:2rem">
+    <div class="info-label">Overview</div>
+    <p>VibeVisionFinds ("we", "us", or "our") operates an automated content and social media publishing platform. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use our website and services. Please read this policy carefully.</p>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Information We Collect</h2>
+    </div>
+    <p>We collect information you provide directly to us, as well as information collected automatically when you use our services.</p>
+    <p><strong>Information you provide:</strong></p>
+    <ul>
+      <li>Name and email address when you register or contact us</li>
+      <li>Account credentials and profile information</li>
+      <li>Content you submit, upload, or publish through our platform</li>
+      <li>Communications you send to us</li>
+    </ul>
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li>Log data including IP address, browser type, pages visited, and time spent</li>
+      <li>Device information including hardware model and operating system</li>
+      <li>Usage patterns and interaction data with our platform</li>
+      <li>Cookies and similar tracking technologies (see Section 3)</li>
+    </ul>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>How We Use Your Data</h2>
+    </div>
+    <p>VibeVisionFinds uses the information we collect for the following purposes:</p>
+    <ul>
+      <li>To provide, operate, and maintain our services and platform</li>
+      <li>To automate content scheduling and publishing on your behalf</li>
+      <li>To send administrative notifications, confirmations, and updates</li>
+      <li>To respond to your comments, questions, and support requests</li>
+      <li>To analyse usage trends and improve the performance of our platform</li>
+      <li>To detect, prevent, and address technical issues or fraudulent activity</li>
+      <li>To comply with legal obligations and enforce our terms</li>
+    </ul>
+    <div class="highlight-box">
+      <p>We do not sell, rent, or trade your personal information to third parties for their marketing purposes. Your data is used solely to operate and improve VibeVisionFinds services.</p>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Cookies &amp; Tracking Technologies</h2>
+    </div>
+    <p>We use cookies and similar tracking technologies to track activity on our platform and to hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
+    <p>We use the following types of cookies:</p>
+    <ul>
+      <li><strong>Essential cookies:</strong> Required for the platform to function properly</li>
+      <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our platform</li>
+      <li><strong>Preference cookies:</strong> Remember your settings and preferences</li>
+    </ul>
+    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some portions of our platform may not function properly.</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>VibeVisionFinds integrates with third-party services to deliver our automation features. These services have their own privacy policies, and we encourage you to review them.</p>
+    <ul>
+      <li><strong>Google (Gemini AI):</strong> Used for AI-powered content generation — <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent)">Google Privacy Policy</a></li>
+      <li><strong>Cloudflare:</strong> Used for content delivery and image storage — <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" style="color:var(--accent)">Cloudflare Privacy Policy</a></li>
+      <li><strong>Telegram:</strong> Used for workflow notifications — <a href="https://telegram.org/privacy" target="_blank" style="color:var(--accent)">Telegram Privacy Policy</a></li>
+      <li><strong>n8n:</strong> Workflow automation platform — <a href="https://n8n.io/legal/privacy" target="_blank" style="color:var(--accent)">n8n Privacy Policy</a></li>
+    </ul>
+    <p>We are not responsible for the privacy practices of these third-party services.</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Pinterest Integration</h2>
+    </div>
+    <p>VibeVisionFinds uses the Pinterest API to automate the creation and scheduling of pins on Pinterest boards on your behalf. By connecting your Pinterest account to our platform, you authorise us to:</p>
+    <ul>
+      <li>Read your Pinterest boards and board metadata</li>
+      <li>Create and publish pins to your Pinterest boards</li>
+      <li>Access your Pinterest profile information as permitted by Pinterest's API scopes</li>
+    </ul>
+    <div class="highlight-box">
+      <p>We only request the minimum Pinterest API permissions needed to operate our service (<strong>boards:read</strong> and <strong>pins:write</strong>). We do not access, store, or share your Pinterest followers, messages, or personal analytics.</p>
+    </div>
+    <p>Your Pinterest data is processed in accordance with both this Privacy Policy and <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" style="color:var(--accent)">Pinterest's Privacy Policy</a>. You can revoke our access to your Pinterest account at any time through your Pinterest account settings under "Apps and websites".</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Data Sharing &amp; Disclosure</h2>
+    </div>
+    <p>We do not sell or share your personal data except in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> We share data with vendors who assist in operating our platform (hosting, analytics, AI processing) under strict confidentiality agreements</li>
+      <li><strong>Legal compliance:</strong> We may disclose data when required by law, court order, or governmental authority</li>
+      <li><strong>Business transfer:</strong> If VibeVisionFinds is acquired or merged, your data may be transferred as part of that transaction with prior notice to you</li>
+      <li><strong>With your consent:</strong> We may share your information for any other purpose with your explicit consent</li>
+    </ul>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Data Retention</h2>
+    </div>
+    <p>We retain your personal information only for as long as necessary to fulfil the purposes described in this policy, or as required by law.</p>
+    <ul>
+      <li>Account data is retained for the duration of your active account</li>
+      <li>Published content and pin records are retained for up to 2 years</li>
+      <li>Log data and analytics are retained for up to 12 months</li>
+      <li>Upon account deletion, your data is permanently removed within 30 days</li>
+    </ul>
+    <p>Images uploaded to our Cloudflare R2 storage for pin creation are retained until you request deletion or close your account.</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Your Rights</h2>
+    </div>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+      <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+      <li><strong>Deletion:</strong> Request deletion of your personal data ("right to be forgotten")</li>
+      <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+      <li><strong>Objection:</strong> Object to processing of your data for certain purposes</li>
+      <li><strong>Withdraw consent:</strong> Withdraw consent for data processing at any time</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details in Section 12. We will respond to all requests within 30 days.</p>
+  </div>
+
+  <!-- Section 9 -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Security</h2>
+    </div>
+    <p>The security of your data is important to us. We implement commercially reasonable technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction.</p>
+    <ul>
+      <li>All data transmissions are encrypted using SSL/TLS</li>
+      <li>API keys and credentials are stored encrypted and never exposed in plain text</li>
+      <li>Access to personal data is restricted to authorised personnel only</li>
+      <li>We conduct regular security reviews of our platform</li>
+    </ul>
+    <div class="highlight-box">
+      <p>However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+    </div>
+  </div>
+
+  <!-- Section 10 -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>VibeVisionFinds does not knowingly collect personal information from anyone under the age of 13. Our platform is intended for users who are at least 13 years old. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will delete that information.</p>
+  </div>
+
+  <!-- Section 11 -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the "Effective Date" at the top.</p>
+    <p>We encourage you to review this Privacy Policy periodically. Your continued use of our platform after any changes constitutes acceptance of the updated policy.</p>
+    <div class="info-box">
+      <div class="info-label">Current version</div>
+      <p>This Privacy Policy was last updated on <strong>January 1, 2025</strong>. Previous versions are available upon request.</p>
+    </div>
+  </div>
+
+  <!-- Section 12 -->
+  <div class="section" id="s12">
+    <div class="section-header">
+      <div class="section-number">12</div>
+      <h2>Contact Us</h2>
+    </div>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the way we handle your personal data, please contact us:</p>
+    <div class="contact-card">
+      <h3>VibeVisionFinds</h3>
+      <p>For all privacy-related enquiries:</p>
+      <p>Email: <a href="mailto:privacy@VibeVisionFinds.com">privacy@VibeVisionFinds.com</a></p>
+      <p>Website: <a href="https://www.VibeVisionFinds.com">www.VibeVisionFinds.com</a></p>
+      <p style="margin-top:1rem;font-size:13px;color:rgba(250,247,242,0.4)">We aim to respond to all privacy requests within 30 days of receipt.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-logo">Vibe<span>Vision</span>Finds</div>
+  <p>&copy; 2025 VibeVisionFinds. All rights reserved. &nbsp;|&nbsp; Privacy Policy</p>
+</footer>
+
+</body>
+</html>
